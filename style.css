@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa');
+a{
+  text-decoration: none;
+}
+.nav{
+    height: 55px;
+    background-color: #3b4252;
+    border: 2px solid #81a1c1;
+    border-radius: 12px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.nav div{
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+    padding: 15px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: #eceff4;
+}
+.nav ul{
+    position: absolute;
+    right: 25px;
+}
+.nav ul li{
+    display: inline-block;
+}
+.nav ul li a{
+    color: #88c0d0;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    transition: font-size 0.8s ease-in-out;
+}
+.nav ul li a:hover{
+    color: #8fbcbb;
+    font-size:20px;
+}
+body{
+    background: url("../Images/MilkyNatural.jpg");
+    background-size: 150% auto;
+    background-attachment: fixed;
+
+}
+.home .gallery{
+  margin: 10px;
+  float: left;
+  width: 400px;
+}
+.home .gallery:hover img{
+  border: 2px solid #5e81ac;
+}
+.home .gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  border: 2px solid #b48ead;
+}
+
+.home .text-container{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2e3440;
+    background-size: cover;
+    opacity: 0; /* Set initial opacity to 0 */
+    animation: fadeIn 1s ease-in-out forwards;
+    border: 2px solid #b48ead;
+    border-radius: 12px;
+    margin: 30vh auto 5vh auto;
+    width: 900px;
+    height: 300px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.85;
+  }
+}
+
+.home .text-container h1{
+    color: #eceff4;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+}
+.home .text-container h2{
+    color: #e5e9f0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+}
+.home .text-container .Logo{
+    height: 120px;
+}
+.home .text-container .socials img{
+    padding: 0 10px 0 10px;
+    height: 45px;
+}
+
+/* Define the animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px); /* Move elements slightly up */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Reset position */
+  }
+}
+
+/* Apply animation to elements */
+.about .Logo,
+.about .about-content h1,
+.about .about-content p {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.about .Logo, .articles .Logo {
+  height: 180px;
+  display: block;
+  margin: 6vh auto auto auto;
+}
+
+.about .about-content {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10vh;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.about .about-content h1 {
+  color: #eceff4;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60px;
+}
+
+.about .about-content p {
+  color: #e5e9f0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 25px;
+  border: 2px solid #a3be8c;
+  border-radius: 14px;
+  background: #2e3440;
+  opacity: 0.85;
+  margin: 15px;
+}
+.articles .articles-content p{
+  color: #88c0d0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 25px;
+  border: 2px solid #5e81ac;
+  border-radius: 14px;
+  background: #2e3440;
+  opacity: 0.85;
+  margin: 15px;
+}
+.articles .articles-content a{
+  color: #e5e9f0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 35px;
+}
+.milestones .Logo {
+  height: 150px;
+  display: block;
+  margin: 6vh 0 0 0;
+}
+.milestones .milestones-content {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10vh;
+}
+.milestones .milestones-content h2{
+  color: #ebcb8b;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+.milestones .milestones-content .card{
+  border: 2px solid #8fbcbb;
+  border-radius: 14px;
+  background: #2e3440;
+  opacity: 0.85;
+  margin: 20px;
+}
+.milestones .milestones-content .card h1{
+  color: #eceff4;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60px;
+}
+.milestones .milestones-content .card p{
+  color: #e5e9f0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 25px;
+  display: none;
+  transition: opacity 0.3s ease-in-out;
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.card.active h1,
+.card.active p {
+  animation: fadeInOut 0.8s ease-in-out;
+}
+/* Media query for mobile devices */
+@media (min-width: 300px) and (max-width: 479px) {
+    .nav {
+    height: auto;
+    text-align: center;
+    margin: 0;
+  }
+
+  .nav div {
+    position: static;
+    padding: 5px;
+    font-size: 20px;
+  }
+
+  .nav ul {
+    position: static;
+    text-align: center;
+  }
+
+  .nav ul li {
+    display: inline-block;
+  }
+  .nav ul li a{
+      font-size: 14px;
+}
+  .home .text-container{
+      width: 320px;
+      height: 170px;
+}
+  .home .text-container .Logo{
+    height: 60px;
+}
+
+  .home .text-container h2 {
+    font-size: 13px;
+  }
+  .home .text-container .socials a img{
+    height: 30px;
+  }
+  .about .about-content h1{
+    font-size: 18px;
+  }
+  .about .about-content p{
+    font-size:15px;
+  }
+  .about .Logo, .articles .Logo{
+    height: 60px;
+  }
+  .milestones .Logo{
+    height: 40px;
+  }
+  .milestones .milestones-content h2{
+    font-size: 12px;
+  }
+  .milestones .milestones-content .card h1{
+    font-size:18px;
+  }
+  .milestones .milestones-content .card p{
+    font-size:15px;
+  }
+  .articles .articles-content p{
+    font-size:15px;
+  }
+  .articles .articles-content a{
+    font-size:20px;
+  }
+}
+@media (min-width: 480px) and (max-width: 600px) {
+    .nav {
+    height: auto;
+    text-align: center;
+    margin: 0;
+  }
+
+  .nav div {
+    position: static;
+    padding: 5px;
+    font-size: 30px;
+  }
+
+  .nav ul {
+    position: static;
+    text-align: center;
+  }
+
+  .nav ul li {
+    display: inline-block;
+  }
+  .nav ul li a{
+      font-size: 16px;
+}
+  .home .text-container{
+      width: 400px;
+      height: 200px;
+}
+  .home .text-container .Logo{
+    height: 80px;
+}
+
+  .home .text-container h2 {
+    font-size: 16px;
+  }
+  .home .text-container .socials a img{
+    height:35px;
+  }
+  .about .about-content h1{
+    font-size: 20px;
+  }
+  .about .about-content p{
+    font-size:18px;
+  }
+  .about .Logo, .articles .Logo{
+    height: 80px;
+  }
+  .milestones .Logo{
+    height: 60px;
+  }
+  .milestones .milestones-content h2{
+    font-size: 15px;
+  }
+  .milestones .milestones-content .card h1{
+    font-size:25px;
+  }
+  .milestones .milestones-content .card p{
+    font-size:18px;
+  }
+  .articles .articles-content p{
+    font-size:18px;
+  }
+  .articles .articles-content a{
+    font-size:25px;
+  }
+}
+@media (min-width: 601px) and (max-width: 915px) {
+
+  .nav ul li {
+    display: inline-block;
+  }
+  .nav ul li a{
+      font-size: 16px;
+}
+  .home .text-container{
+      width: 580px;
+      height: 250px;
+}
+  .home .text-container .Logo{
+    height: 100px;
+}
+
+  .home .text-container h2 {
+    font-size: 20px;
+  }
+  .home .text-container .socials a img{
+    height: 40px;
+  }
+    .about .about-content h1{
+    font-size: 40px;
+  }
+  .about .about-content p{
+    font-size:20px;
+  }
+  .about .Logo, .articles .Logo{
+    height: 100px;
+  }
+  .milestones .Logo{
+    height: 80px;
+  }
+  .milestones .milestones-content h2{
+    font-size: 18px;
+  }
+  .milestones .milestones-content .card h1{
+    font-size:40px;
+  }
+  .milestones .milestones-content .card p{
+    font-size:22px;
+  }
+  .articles .articles-content p{
+    font-size:20px;
+  }
+  .articles .articles-content a{
+    font-size:30px;
+  }
+}
